@@ -2,17 +2,18 @@
 
 int main(){
     int n;
-    printf("Masukkan jumlah keluarga: ");
+    printf("Masukkan jumlah keluarga : ");
     scanf("%d", &n);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0;i < n;i++){
         char nik[20], nama[50];
         int anggota;
-        printf("Masukkan Data Keluarga %d : \n",i + 1);
+        printf("Masukkan Data Keluarga %d \n",i + 1);
         printf("NIK : ");
         scanf("%s", nik);
         printf("Nama Kepala Keluarga : ");
         scanf(" %[^\n]",nama);
-        do {
+
+        do{
             printf("Jumlah Anggota Keluarga : ");
             scanf("%d",&anggota);
             if (anggota <= 0){
@@ -22,17 +23,16 @@ int main(){
         tambahKeluarga(nik,nama,anggota);
     }
     tampilkanSemua();
+
     char cariNik[20];
-    printf("Masukkan NIK yang ingin dicari: ");
+    printf("Masukkan NIK yang ingin dicari : ");
     scanf("%s", cariNik);
     Keluarga *hasil = searchHash(cariNik);
 
     if (hasil != NULL){
-        printf("Data ditemukan : \n");
-        printf("NIK : %s\n",hasil->nik);
+        printf("\nData ditemukan\n");
         printf("Nama : %s\n",hasil->nama);
-        printf("Jumlah Anggota : %d\n",hasil->anggota);
-        printf("Total Kalori : %d\n",hasil->totalKalori);
+        printf("Total Kalori : %dkkal\n",hasil->totalKalori);
     }else{
         printf("Data dengan NIK %s tidak ditemukan\n",cariNik);
     }
