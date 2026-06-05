@@ -21,6 +21,22 @@ int main(){
         }while(anggota <= 0);
         tambahKeluarga(nik,nama,anggota);
     }
+    tampilkanSemua();
+    char cariNik[20];
+    printf("Masukkan NIK yang ingin dicari: ");
+    scanf("%s", cariNik);
+    Keluarga *hasil = searchHash(cariNik);
+
+    if (hasil != NULL){
+        printf("Data ditemukan : \n");
+        printf("NIK : %s\n",hasil->nik);
+        printf("Nama : %s\n",hasil->nama);
+        printf("Jumlah Anggota : %d\n",hasil->anggota);
+        printf("Total Kalori : %d\n",hasil->totalKalori);
+    }else{
+        printf("Data dengan NIK %s tidak ditemukan\n",cariNik);
+    }
+    return 0;
 }
 
 
