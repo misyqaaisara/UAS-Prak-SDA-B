@@ -19,6 +19,7 @@ int main(){
                 printf("Data Tidak Valid\n");
             }
         }while(anggota <= 0);
+        tambahKeluarga(nik,nama,anggota);
     }
 }
 
