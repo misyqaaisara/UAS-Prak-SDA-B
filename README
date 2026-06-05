@@ -1,0 +1,107 @@
+# Sistem Distribusi Bantuan Pangan Bedasarkan Kebutuhan Kalori Keluarga #
+
+* Deskripsi Program
+  Program ini dibuat untuk membantu dalam proses pendataan dan penentuan 
+  prioritas distribusi bantuan pangan berdasarkan kebutuhan kalori harian.
+  Kebutuhan kalori dihitung dari jumlah anggota keluarga dengan asumsi 
+  setiap orang membutuhkan 2000 kkal per hari.
+
+* Program akan:
+  - Menerima input data keluarga.
+  - Menghitung total kebutuhan kalori setiap keluarga.
+  - Mengurutkan keluarga berdasarkan kebutuhan kalori tertinggi.
+  - Memberikan rekomendasi bantuan pangan menggunakan algoritma greedy.
+  - Mencari data keluarga berdasarkan NIK menggunakan algoritma hash table.
+
+* Tujuan Program
+  - Mengelola data keluarga penerima bantuan.
+  - Menentukan prioritas bantuan berdasarkan kebutuhan kalori.
+  - Mempermudah pencarian data keluarga menggunakan NIK.
+  - Mengimplementasikan beberapa struktur data dan algoritma dalam bahasa C.
+
+* Struktur Data yang Digunakan
+  1. Array
+     digunakan untuk menyimpan data bahan pangan beserta jumlah kalorinya secara statis.
+
+     > Data yang disimpan :
+       - Nama bahan pangan
+       - Jumlah kalori
+
+    > Contoh Data :
+       - Beras (3600 kkal)
+       - Telur (700 kkal)
+       - Minyak (900 kkal)
+       - Susu (600 kkal)
+       - Mie Instan (400 kkal)
+
+  2. Linked List
+    digunakan untuk menyimpan data keluarga secara dinamis.
+
+    > Data yang disimpan :
+      - NIK
+      - Nama Kepala Keluarga
+      - Jumlah Anggota Keluarga
+      - Total Kebutuhan Kalori
+
+  3. Hash Table
+     digunakan untuk mempercepat proses pencarian data keluarga berdasarkan NIK.
+
+     > Metode yang digunakan :
+       - Hash Function : Menggunakan metode modulo dengan ukuran hash table yang sesuai.
+       - Chaining untuk menangani collision.
+
+* Algoritma yang Digunakan
+  1. Linear Search
+     digunakan untuk mencari data bahan pangan pada array bahan pangan.
+
+  2. Quick Sort
+     digunakan untuk mengurutkan keluarga berdasarkan total kebutuhan kalori dari yang terbesar
+     ke yang terkecil sehingga prioritas bantuan dapat ditentukan.
+
+  3. Greedy Algorithm
+     digunakan untuk memberikan rekomendasi bantuan pangan dengan memilih bahan pangan yang memiliki jumlah
+     kalori terbesar terlebih dahulu hingga kebutuhan kalori keluarga terpenuhi.
+
+* Cara Kerja Program
+  1. Pengguna memasukkan jumlah keluarga.
+  2. Pengguna memasukkan data setiap keluarga :
+     - NIK
+     - Nama Kepala Keluarga
+     - Jumlah Anggota Keluarga
+  3. Sistem menghitung total kebutuhan kalori :
+     Total Kebutuhan Kalori = Jumlah Anggota Keluarga x 2000 kkal
+  4. Data disimpan ke dalam linked list dan hash table.
+  5. Data keluarga diurutkan menggunakan Quick Sort.
+  6. Program menampilkan prioritas bantuan.
+  7. Program memberikan rekomendasi bahan pangan menggunakan aloritma greedy.
+  8. Pengguna dapat mencari data keluarga berdasarkan NIK.
+
+* Struktur File Program
+  1. header.h
+     berisi : - Library yang digunakan
+              - Konstanta program
+              - Struktuk data
+              - Prototype fungsi
+            
+  2. fungsi.c
+     berisi : - Impelemtasi Linked List
+              - Implementasi Hash Table
+              - Linear Search
+              - Quick Sort
+              - Greedy Algorithm
+              - Fungsi tampilan data
+
+  3. main.c
+     berisi : - Fungsi utama program
+              - Input data pengguna
+              - Pemanggilan seluruh fungsi program
+
+  4. README
+     berisi penjelasan program.
+
+
+* Anggota Kelompok 8
+  1. M. Rafa Vicdhan Aufa 250810701100018
+  2. Misyqa Aisara 250810701100028
+  3. Kania Ghaitsa Aqira 250810701100035
+  4. Lili Anggriani 250810701100106
