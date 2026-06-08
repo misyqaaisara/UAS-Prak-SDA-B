@@ -12,6 +12,7 @@ int main(){
         scanf("%s", nik);
         printf("Nama Kepala Keluarga : ");
         scanf(" %[^\n]",nama);
+        printf("\n");
 
         do{
             printf("Jumlah Anggota Keluarga : ");
