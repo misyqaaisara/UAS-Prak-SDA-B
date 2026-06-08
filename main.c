@@ -7,12 +7,12 @@ int main(){
     for (int i = 0;i < n;i++){
         char nik[20], nama[50];
         int anggota;
+        printf("\n");
         printf("Masukkan Data Keluarga %d \n",i + 1);
         printf("NIK : ");
         scanf("%s", nik);
         printf("Nama Kepala Keluarga : ");
         scanf(" %[^\n]",nama);
-        printf("\n");
 
         do{
             printf("Jumlah Anggota Keluarga : ");
